@@ -3,7 +3,6 @@ module.exports = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
-  theme: {
     theme: {
       screens: {
         sm: '480px',
@@ -21,14 +20,14 @@ module.exports = {
         'pink': '#ED7297',
         'dark-green':'#236486',
         'light-green':'#79C4C0',
-        'grey':'#A0A0A0'
+        'grey':'#A0A0A0',
+        'white':'#ffffff'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],
         serif: ['Merriweather', 'serif'],
       },
       
-    }
   },
   plugins: [],
 }
