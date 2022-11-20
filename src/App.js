@@ -1,7 +1,11 @@
 import React from "react";
-
+import SideBar from "./components/sideBar";
+import Main from "./components/Main";
 function App(){
-    return <h2 className="">Hello from React app</h2>
+    return <>
+        <SideBar/>
+        <Main/>
+    </>
 }
 
 export default App;
