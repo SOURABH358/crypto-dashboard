@@ -3,13 +3,13 @@ function Cards(){
         <div className="w-full h-full bg-gradient-to-r from-medium-blue to-light-blue rounded-lg">
 
         </div>
-        <div className="w-full h-full bg-darker-blue">
+        <div className="w-full h-full bg-gradient-to-r from-dark-purple to-light-purple">
 
         </div>
-        <div className="w-full h-full bg-darker-blue">
+        <div className="w-full h-full bg-gradient-to-r from-pink to-light-pink">
 
         </div>
-        <div className="w-full h-full bg-darker-blue">
+        <div className="w-full h-full bg-gradient-to-r from-dark-green to-light-green">
 
         </div>
     </section>
