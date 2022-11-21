@@ -9,7 +9,7 @@ function Cards() {
                     <div className="px-2 border-2 border-white rounded-md text-[0.9rem]">Trade</div>
                 </div>
             </div>
-            <div className="text-grey">Bitcoin</div>
+            <div className="text-white">Bitcoin</div>
             <div className="flex justify-between text-white items-center">
                 <p className="text-3xl">$ 48,789.50</p>
                 <p>-0.58%</p>
@@ -23,7 +23,7 @@ function Cards() {
                     <div className="px-2 border-2 border-white rounded-md text-[0.9rem]">Trade</div>
                 </div>
             </div>
-            <div className="text-grey">Bitcoin</div>
+            <div className="text-white">Bitcoin</div>
             <div className="flex justify-between text-white items-center">
                 <p className="text-3xl">$ 48,789.50</p>
                 <p>-0.58%</p>
@@ -37,7 +37,7 @@ function Cards() {
                     <div className="px-2 border-2 border-white rounded-md text-[0.9rem]">Trade</div>
                 </div>
             </div>
-            <div className="text-grey">Bitcoin</div>
+            <div className="text-white">Bitcoin</div>
             <div className="flex justify-between text-white items-center">
                 <p className="text-3xl">$ 48,789.50</p>
                 <p>-0.58%</p>
@@ -51,7 +51,7 @@ function Cards() {
                     <div className="px-2 border-2 border-white rounded-md text-[0.9rem]">Trade</div>
                 </div>
             </div>
-            <div className="text-grey">Bitcoin</div>
+            <div className="text-white">Bitcoin</div>
             <div className="flex justify-between text-white items-center">
                 <p className="text-3xl">$ 48,789.50</p>
                 <p>-0.58%</p>
