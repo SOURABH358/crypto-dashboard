@@ -48,15 +48,27 @@ import {
   };
 
 function Price__chart() {
-    const labels = ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh'];
+    const labels = ['', '', '', '', '', '', '','', '', '', '', '', '', '','', '', '', '', '', '', ''];
     const data = {
         labels: labels,
         datasets: [{
+          label: 'My First Dataset',
+          data: [10, 73, 40, 85, 56, 96, 32,64, 73, 40, 85, 56, 96, 64,81, 73, 40, 85, 56, 96, 32],
+          backgroundColor: [
+            'rgba(153, 102, 255, 0.1)',
+          ],
+            borderColor: [
+              'rgba(0,0,0,0.2)',
+            ],
+            borderWidth: 0,
+            fill:true
+      },
+      {
             label: 'My First Dataset',
-            data: [65, 59, 80, 81, 56, 55, 40],
+            data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
+              'rgba(75, 192, 192, 0.4)',
+              'rgba(54, 162, 235, 0.4)',
               'rgba(153, 102, 255, 0.2)',
               'rgba(201, 203, 207, 0.2)'
             ],
