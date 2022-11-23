@@ -7,6 +7,7 @@ import {
     Title,
     Tooltip,
     Legend,
+    Filler
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
 //   import faker from 'faker';
@@ -18,7 +19,8 @@ import {
     LineElement,
     Title,
     Tooltip,
-    Legend
+    Legend,
+    Filler
   );
   export const options = {
     responsive: true,
@@ -27,22 +29,21 @@ import {
     lineTension: 0.3,
     radius:0,
     scales: {
-        xAxes: [{
-            gridLines: {
-                display:false
-            }
-        }],
-        yAxes: [{
-            gridLines: {
-                display:false
-            }   
-        }]
+      x: {
+        grid: {
+          display: false
+        }
+      },
+      y: {
+        grid: {
+          display: false
+        }
+      }
     },
     plugins: {
       legend: {
         display: false
       },
-      
     },
   };
 
@@ -53,19 +54,25 @@ function Price__chart() {
         datasets: [{
             label: 'My First Dataset',
             data: [65, 59, 80, 81, 56, 55, 40],
-            backgroundColor: 'rgba(54, 162, 235,0.4)',
+            backgroundColor: [
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
               borderColor: [
                 'rgb(54, 162, 235)',
                 'rgb(153, 102, 255)',
                 'rgb(201, 203, 207)'
               ],
               borderWidth: 2,
-              fill: true
+              fill:true
         }]
     };
     return (
         <div className="">
-            <Line data={{...data}}
+            <Line 
+            data={{...data}}
             height={200}
             width={400}
             options={options}/>
