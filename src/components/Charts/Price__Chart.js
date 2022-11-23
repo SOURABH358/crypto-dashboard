@@ -11,7 +11,8 @@ import {
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
 //   import faker from 'faker';
-  
+const image = new Image();
+image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
   ChartJS.register(
     CategoryScale,
     LinearScale,
@@ -27,6 +28,9 @@ import {
     maintainAspectRatio:false,
     smooth:true,
     lineTension: 0.3,
+    interaction: {
+      mode:'index'
+    },
     radius:0,
     scales: {
       x: {
@@ -44,6 +48,7 @@ import {
       legend: {
         display: false
       },
+      
     },
   };
 
@@ -64,7 +69,7 @@ function Price__chart() {
             fill:true
       },
       {
-            label: 'My First Dataset',
+            label: 'My second Dataset',
             data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
               'rgba(75, 192, 192, 0.4)',
