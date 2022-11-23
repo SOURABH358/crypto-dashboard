@@ -73,7 +73,7 @@ function Price__chart() {
         <div className="">
             <Line 
             data={{...data}}
-            height={200}
+            height={250}
             width={400}
             options={options}/>
         </div>
