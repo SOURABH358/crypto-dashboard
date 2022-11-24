@@ -2,7 +2,7 @@ import CoinInfo from "./CoinInfo";
 import Price__chart from "./Charts/Price__Chart";
 function CentreComponent(){
     return (
-        <section id="centre__component" className="h-[25rem] p-4 flex gap-4 shadow-lg">
+        <section id="centre__component" className="h-[25rem] px-4 flex gap-4 shadow-lg">
             <div className="w-[65%] h-full rounded-lg bg-darker-blue text-white p-4">
                 <h3 className="">Price</h3>
                 <p className="text-grey text-[0.9rem] pt-2 mb-6">The price of Bitcoin over the last day</p>
