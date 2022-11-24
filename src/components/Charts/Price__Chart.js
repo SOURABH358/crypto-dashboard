@@ -31,7 +31,7 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
     interaction: {
       mode:'index'
     },
-    radius:0,
+    radius:2,
     scales: {
       x: {
         grid: {
@@ -39,9 +39,11 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
         }
       },
       y: {
+        beginAtZero: true,
         grid: {
           display: false
-        }
+        },
+        
       }
     },
     plugins: {
@@ -57,18 +59,6 @@ function Price__chart() {
     const data = {
         labels: labels,
         datasets: [{
-          label: 'My First Dataset',
-          data: [10, 73, 40, 85, 56, 96, 32,64, 73, 40, 85, 56, 96, 64,81, 73, 40, 85, 56, 96, 32],
-          backgroundColor: [
-            'rgba(153, 102, 255, 0.1)',
-          ],
-            borderColor: [
-              'rgba(0,0,0,0.2)',
-            ],
-            borderWidth: 0,
-            fill:true
-      },
-      {
             label: 'My second Dataset',
             data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40],
             backgroundColor: [
