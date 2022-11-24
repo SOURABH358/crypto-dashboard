@@ -1,4 +1,4 @@
-import { WiDayCloudyGusts } from "react-icons/wi";
+import { FcAreaChart,FcPositiveDynamic, FcCurrencyExchange, FcLineChart, FcMoneyTransfer,FcMindMap } from "react-icons/fc";
 function CoinInfo() {
     return (
         <>
@@ -10,45 +10,45 @@ function CoinInfo() {
             </div>
             <div className="flex flex-col w-full">
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcCurrencyExchange className="text-3xl text-medium-blue" />
                     <div className="flex w-[90%] justify-between">
                         <p className="text-grey">Price to USD</p>
-                        <p>$ 16,589.05</p>
+                        <p className="text-success-green">$ 16,589.05</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcMoneyTransfer className="text-3xl text-medium-blue" />
                     <div className="flex w-[90%] justify-between">
-                        <p className="text-grey">Price to BTC</p>
-                        <p>1.00 BTC</p>
+                        <p className="text-grey text-[0.9rem]">Price to BTC</p>
+                        <p className="text-success-green">1.00 BTC</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcPositiveDynamic className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
-                        <p className="text-grey">Rank</p>
-                        <p>1</p>
+                        <p className="text-grey text-[0.9rem]">Rank</p>
+                        <p className="text-success-green">1</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcLineChart className="text-3xl" />
                     <div className="flex  w-[90%] justify-between">
-                        <p className="text-grey">24h Volume</p>
-                        <p>$ 22.70 billion</p>
+                        <p className="text-grey text-[0.9rem]">24h Volume</p>
+                        <p className="text-success-green">$ 22.70 billion</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcAreaChart className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
-                        <p className="text-grey">Market Cap</p>
-                        <p>$ 318.77 billion</p>
+                        <p className="text-grey text-[0.9rem]">Market Cap</p>
+                        <p className="text-success-green">$ 318.77 billion</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
-                    <WiDayCloudyGusts className="text-3xl text-dark-blue" />
+                    <FcMindMap className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
-                        <p className="text-grey">Volume/Market Cap</p>
-                        <p>0.0767</p>
+                        <p className="text-grey text-[0.9rem]">Volume/Market Cap</p>
+                        <p className="text-success-green">0.0767</p>
                     </div>
                 </div>
             </div>
