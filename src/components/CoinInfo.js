@@ -4,7 +4,7 @@ function CoinInfo() {
         <>
             <div className="flex justify-between px-4 mb-4">
             <h3 className="font-bold text-[1.25rem] text-white ">Value Statistics</h3>
-            <div className="w-8">
+            <div className="w-8 text-white">
                 <img className="w-full" src="https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg"/>
             </div>
             </div>
