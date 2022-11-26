@@ -15,17 +15,25 @@ function AppWrapper({children}){
         }
     };
     useEffect(()=>{
-        // fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', options)
-        //     .then(response => response.json())
-        //     .then(response => {
-        //         // console.log(response.data.coins)
-        //         return dispatch({type:'COINS__DATA', payload: {data: response.data.coins}})})
-        //     .catch(err => console.error(err));
+        fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', options)
+            .then(response => response.json())
+            .then(response => {
+                // console.log(response.data.coins)
+                return dispatch({type:'COINS__DATA', payload: {data: response.data.coins}})})
+            .catch(err => console.error(err));
     },[])
+    console.log(GlobalState.current)
+    // useEffect(()=>{
+
+    // },GlobalState.current)
+    function changeCurrent(e){
+       dispatch({type:'CHANGE__CURRENT', payload:{data:e.target.value}})
+    }
     return (
         <AppContext.Provider
         value={{
-            ...GlobalState
+            ...GlobalState,
+            changeCurrent
         }}
         >
             {children}
