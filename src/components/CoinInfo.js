@@ -1,5 +1,6 @@
 import { FcAreaChart,FcPositiveDynamic, FcCurrencyExchange, FcLineChart, FcMoneyTransfer,FcMindMap } from "react-icons/fc";
 import { GlobalContext } from "../Context";
+import { formatCurrency } from "./Utils/formatCurrency";
 function CoinInfo() {
     const {current} = GlobalContext();
     return (
@@ -15,14 +16,14 @@ function CoinInfo() {
                     <FcCurrencyExchange className="text-3xl text-medium-blue" />
                     <div className="flex w-[90%] justify-between">
                         <p className="text-grey">Price to USD</p>
-                        <p className="text-success-green">$ {parseFloat(current.price).toFixed(2)}</p>
+                        <p className="text-success-green">$ {formatCurrency(current.price)}</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
                     <FcMoneyTransfer className="text-3xl text-medium-blue" />
                     <div className="flex w-[90%] justify-between">
                         <p className="text-grey text-[0.9rem]">Price to BTC</p>
-                        <p className="text-success-green">{parseFloat(current.btcPrice).toFixed(2)} BTC</p>
+                        <p className="text-success-green">{formatCurrency(current.btcPrice)} BTC</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
@@ -50,7 +51,7 @@ function CoinInfo() {
                     <FcMindMap className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
                         <p className="text-grey text-[0.9rem]">Listed At</p>
-                        <p className="text-success-green">{current.listedAt}</p>
+                        <p className="text-success-green">{formatCurrency(current.listedAt)}</p>
                     </div>
                 </div>
             </div>

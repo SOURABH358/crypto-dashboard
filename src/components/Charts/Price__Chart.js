@@ -79,7 +79,7 @@ function Price__chart() {
               'rgba(65, 105, 255, 0.3)',
             ],
               borderColor: [
-                '#4169FF',
+                'rgba(65, 105, 255, 1)',
               ],
               borderWidth: 2,
               fill:true
