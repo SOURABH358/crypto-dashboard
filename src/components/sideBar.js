@@ -2,7 +2,7 @@ import { FaUserAlt, FaBandcamp, FaChartPie, FaNewspaper, FaEnvelope,FaHeadset } 
 import { BsFillGearFill } from "react-icons/bs";
 function SideBar() {
     return (
-        <section id="side__bar" className="min-h-screen bg-darker-blue py-4">
+        <section id="side__bar" className="w-[25rem] min-h-screen bg-darker-blue py-4">
             <div id="logo" className="text-medium-blue px-6 text-2xl font-bold">COINF</div>
             <ul id="menu__bar" className="list-none flex flex-col py-12 text-grey">
                 <li className="flex py-3 pl-6 gap-2 items-center text-grey  hover:text-medium-blue hover:bg-darkest-blue cursor-pointer">

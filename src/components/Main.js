@@ -4,7 +4,7 @@ import CentreComponent from "./CentreComponent";
 import BottomComponent from "./BottomComponent";
 function Main(){
     return (
-        <section id="main" className="min-h-screen bg-darkest-blue">
+        <section id="main" className="w-[80rem] min-h-screen bg-darkest-blue">
             <Header/>
             <Cards/>
             <CentreComponent/>
