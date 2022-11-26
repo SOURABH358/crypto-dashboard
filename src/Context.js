@@ -1,4 +1,4 @@
-import React, {  useContext, useEffect, useReducer } from "react";
+import React, {  useContext, useEffect, useReducer, useState } from "react";
 import Reducer from "./Reducer";
 const initialState = {
     coins: [],
@@ -9,6 +9,8 @@ const initialState = {
 const AppContext = React.createContext();
 function AppWrapper({ children }) {
     const [GlobalState, dispatch] = useReducer(Reducer, initialState);
+    const [displayAccount, setDisplayAccount] = useState(true);
+    const [showNav, setShowNav] = useState(false);
     const coinOptions = {
         method: 'GET',
         headers: {
@@ -61,7 +63,11 @@ function AppWrapper({ children }) {
         <AppContext.Provider
             value={{
                 ...GlobalState,
-                changeCurrent
+                changeCurrent,
+                showNav,
+                setShowNav,
+                displayAccount,
+                setDisplayAccount
             }}
         >
             {children}
