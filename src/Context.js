@@ -22,7 +22,7 @@ function AppWrapper({children}){
                 return dispatch({type:'COINS__DATA', payload: {data: response.data.coins}})})
             .catch(err => console.error(err));
     },[])
-    console.log(GlobalState.current)
+    // console.log(GlobalState.current.sparkline)
     // useEffect(()=>{
 
     // },GlobalState.current)

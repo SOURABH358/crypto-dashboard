@@ -14,6 +14,7 @@ function CentreComponent() {
             <div className="w-[65%] h-full rounded-lg bg-darker-blue text-white p-4">
                 <div className="flex justify-between">
                     <h3 className="">Price</h3>
+                    <p>{current.name}</p>
                     <select name="coins" id="coins" className="bg-darker-blue border-[1px] p-1 text-[0.8rem] rounded-md" value={current.symbol} onChange={(e)=>changeCurrent(e)}>
 
                         {getOptions()}

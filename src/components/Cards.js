@@ -44,7 +44,7 @@ function Cards() {
             <FaAngleRight className="text-2xl" />
         </div>
         <div className={"w-fit flex gap-x-4 h-full"}>
-            {/* {displayCards()} */}
+            {displayCards()}
         </div>
 
     </section>

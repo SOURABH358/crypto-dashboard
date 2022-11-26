@@ -10,6 +10,7 @@ import {
     Filler
   } from 'chart.js';
   import { Line } from 'react-chartjs-2';
+  import { GlobalContext } from '../../Context';
 //   import faker from 'faker';
 const image = new Image();
 image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
@@ -39,7 +40,6 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
         }
       },
       y: {
-        beginAtZero: true,
         grid: {
           display: false
         },
@@ -55,12 +55,26 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
   };
 
 function Price__chart() {
-    const labels = ['', '', '', '', '', '', '','', '', '', '', '', '', '','', '', '', '', '', '', ''];
+  const {current} = GlobalContext();
+  let labelValue;
+  let dataValue
+  if(current.sparkline){
+    dataValue = current.sparkline.map(el=>parseFloat(el).toFixed(2))
+    labelValue = current.sparkline.map((el,i)=>`${24-i} hrs`)
+  }
+  else{
+    dataValue = ['','','','','','','','','',''];
+    labelValue=[[56,89,34,90,45,78,90,67,34,90]]
+  }
+    // const labels = current.sparkline.map(el=>'change');
+    const labels = labelValue;
     const data = {
         labels: labels,
         datasets: [{
-            label: 'My second Dataset',
-            data: [65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40,65, 59, 80, 81, 56, 55, 40],
+            label: current.name,
+            // label: 'My dataset',
+            data: dataValue,
+            // data: [56,89,34,90,45,78,90,67,34,90],
             backgroundColor: [
               'rgba(75, 192, 192, 0.4)',
               'rgba(54, 162, 235, 0.4)',
