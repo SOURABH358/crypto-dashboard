@@ -18,4 +18,11 @@ export default function Reducer(state, action){
             })[0]
         }
     }
+    if(action.type==='GET__EXCHANGES')
+    {
+        return{
+            ...state,
+            exchanges: [...action.payload.data]
+        }
+    }
 }

@@ -1,13 +1,22 @@
+import { type } from "@testing-library/user-event/dist/type";
 import React, { createContext, useContext, useEffect, useReducer } from "react";
 import Reducer from "./Reducer";
 const initialState={
     coins:[],
     current:"",
+    exchanges:[]
 }
 const AppContext = React.createContext();
 function AppWrapper({children}){
     const [GlobalState, dispatch] = useReducer(Reducer, initialState);
-    const options = {
+    const coinOptions = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'a1238b7942msh225a191ee761b65p1ba5e1jsn457057aff454',
+            'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
+        }
+    };
+    const exchangeOptions = {
         method: 'GET',
         headers: {
             'X-RapidAPI-Key': 'a1238b7942msh225a191ee761b65p1ba5e1jsn457057aff454',
@@ -15,12 +24,18 @@ function AppWrapper({children}){
         }
     };
     useEffect(()=>{
-        fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', options)
+        fetch('https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0', coinOptions)
             .then(response => response.json())
             .then(response => {
                 // console.log(response.data.coins)
                 return dispatch({type:'COINS__DATA', payload: {data: response.data.coins}})})
             .catch(err => console.error(err));
+            
+            
+            fetch('https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/exchanges?referenceCurrencyUuid=yhjMzLPhuIDl&limit=50&offset=0&orderBy=24hVolume&orderDirection=desc', exchangeOptions)
+                .then(response => response.json())
+                .then(response => {dispatch({type:'GET__EXCHANGES',payload:{data:response.data.exchanges}})})
+                .catch(err => console.error(err));
     },[])
     // console.log(GlobalState.current.sparkline)
     // useEffect(()=>{

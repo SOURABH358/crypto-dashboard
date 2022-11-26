@@ -10,7 +10,7 @@ function CentreComponent() {
         })
     }
     return (
-        <section id="centre__component" className="h-[25rem] px-4 flex gap-4 shadow-lg">
+        <section id="centre__component" className="h-[23rem] px-4 flex gap-4 shadow-lg">
             <div className="w-[65%] h-full rounded-lg bg-darker-blue text-white p-4">
                 <div className="flex justify-between">
                     <h3 className="">Price</h3>
@@ -20,7 +20,7 @@ function CentreComponent() {
                         {getOptions()}
                     </select>
                 </div>
-                <p className="text-grey text-[0.9rem] pt-2 mb-6">The price of Bitcoin over the last day</p>
+                <p className="text-grey text-[0.9rem] pt-2 mb-6">The price of {current.name} over the last day</p>
                 <Price__chart />
             </div>
             <div className="h-full w-[35%] bg-darker-blue rounded-lg shadow-lg py-4">

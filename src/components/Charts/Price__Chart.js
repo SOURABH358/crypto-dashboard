@@ -28,7 +28,7 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
     responsive: true,
     maintainAspectRatio:false,
     smooth:true,
-    lineTension: 0.3,
+    lineTension: 0.4,
     interaction: {
       mode:'index'
     },
@@ -64,7 +64,7 @@ function Price__chart() {
   }
   else{
     dataValue = ['','','','','','','','','',''];
-    labelValue=[[56,89,34,90,45,78,90,67,34,90]]
+    labelValue=[56,89,34,90,45,78,90,67,34,90]
   }
     // const labels = current.sparkline.map(el=>'change');
     const labels = labelValue;
@@ -76,15 +76,10 @@ function Price__chart() {
             data: dataValue,
             // data: [56,89,34,90,45,78,90,67,34,90],
             backgroundColor: [
-              'rgba(75, 192, 192, 0.4)',
-              'rgba(54, 162, 235, 0.4)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(201, 203, 207, 0.2)'
+              'rgba(65, 105, 255, 0.3)',
             ],
               borderColor: [
-                'rgb(54, 162, 235)',
-                'rgb(153, 102, 255)',
-                'rgb(201, 203, 207)'
+                '#4169FF',
               ],
               borderWidth: 2,
               fill:true

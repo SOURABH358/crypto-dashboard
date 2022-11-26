@@ -49,8 +49,8 @@ function CoinInfo() {
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
                     <FcMindMap className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
-                        <p className="text-grey text-[0.9rem]">Volume/Market Cap</p>
-                        <p className="text-success-green">0.0767</p>
+                        <p className="text-grey text-[0.9rem]">Listed At</p>
+                        <p className="text-success-green">{current.listedAt}</p>
                     </div>
                 </div>
             </div>
