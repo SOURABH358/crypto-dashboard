@@ -3,7 +3,7 @@ export default function Reducer(state, action){
     {
         return {
             ...state,
-            coins:[...action.payload]
+            coins:[...action.payload.data]
         }
     }
 }
