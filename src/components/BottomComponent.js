@@ -31,8 +31,8 @@ function BottomComponent() {
         }):'';
     }
     return (
-        <section className="h-[15rem] p-4 flex gap-4">
-            <div className="text-white flex flex-col bg-darker-blue rounded-md p-4 w-[65%] overflow-y-scroll scrollbar-thin scrollbar-thumb-medium-blue">
+        <section className="h-fit lg:h-[15rem] p-4 flex flex-col lg:flex-row gap-4">
+            <div className="text-white flex flex-col bg-darker-blue rounded-md p-4 w-full h-[25rem] lg:h-full lg:w-[65%] overflow-y-scroll scrollbar-thin scrollbar-thumb-medium-blue">
                 <p className="mb-2 text-[1.25rem] font-semibold text-center py-4">Exchange Listings</p>
                 <div className="grid grid-cols-[1fr,4fr,4fr,4fr,4fr] py-2 text-grey text-[0.8rem] border-b-2">
                     <p>S.No</p>
@@ -43,7 +43,7 @@ function BottomComponent() {
                 </div>
                 {getExchanges()}
             </div>
-            <div className="text-white flex flex-col bg-darker-blue rounded-md p-4 w-[35%] overflow-y-scroll scrollbar-thin scrollbar-thumb-medium-blue">
+            <div className="text-white flex flex-col bg-darker-blue rounded-md p-4 w-full h-[18rem] lg:h-full lg:w-[35%] overflow-y-scroll scrollbar-thin scrollbar-thumb-medium-blue">
                 <p className="text-[2.5xl] font-semibold text-center">Newest Coins</p>
                 <div className="grid grid-cols-[2fr,3fr,3fr] py-2 text-grey text-[0.8rem] border-b-2">
                     <p>Icon</p>
