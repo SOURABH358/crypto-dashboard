@@ -16,7 +16,7 @@ function CoinInfo() {
                     <FcCurrencyExchange className="text-3xl text-medium-blue" />
                     <div className="flex w-[90%] justify-between">
                         <p className="text-grey">Price to USD</p>
-                        <p className="text-success-green">$ {formatCurrency(current.price)}</p>
+                        <p className="text-success-green">$ {parseFloat(current.price,2).toFixed(2)}</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
@@ -37,21 +37,21 @@ function CoinInfo() {
                     <FcLineChart className="text-3xl" />
                     <div className="flex  w-[90%] justify-between">
                         <p className="text-grey text-[0.9rem]">24h Volume</p>
-                        <p className="text-success-green">$ {current["24hVolume"]}</p>
+                        <p className="text-success-green">$ {formatCurrency(current["24hVolume"])}</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
                     <FcAreaChart className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
                         <p className="text-grey text-[0.9rem]">Market Cap</p>
-                        <p className="text-success-green">${current.marketCap}</p>
+                        <p className="text-success-green">${formatCurrency(current.marketCap)}</p>
                     </div>
                 </div>
                 <div className="flex text-white gap-4 items-center w-full py-2 px-4 hover:bg-darkest-blue">
                     <FcMindMap className="text-3xl text-medium-blue" />
                     <div className="flex  w-[90%] justify-between">
                         <p className="text-grey text-[0.9rem]">Listed At</p>
-                        <p className="text-success-green">{formatCurrency(current.listedAt)}</p>
+                        <p className="text-success-green">{current.listedAt}</p>
                     </div>
                 </div>
             </div>

@@ -2,14 +2,10 @@ import { useState } from "react";
 import { FaBitcoin, FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { GlobalContext } from "../Context";
 function Cards() {
-    const [displace, SetDisplace] = useState(true);
     const { coins } = GlobalContext();
-    function rightDisplace() {
-        SetDisplace(true);
-    }
-    function leftDisplace() {
-        SetDisplace(false);
-    }
+    const slider = document.getElementById('slider')
+    // slider.classList.add(`translate-x-+[${displace}%]`)
+    
     function displayCards() {
         const colors = [
             "bg-gradient-to-r from-medium-blue to-light-blue",
@@ -36,14 +32,9 @@ function Cards() {
         })
 
     }
-    return <section id="cards__container" className="relative overflow-hidden w-full h-48 p-4">
-        <div className="absolute top-0 left-0 flex items-center w-4 h-48 text-white z-10" onClick={leftDisplace}>
-            <FaAngleLeft className="text-2xl" />
-        </div>
-        <div className="absolute right-0 top-0 flex items-center w-4 h-48 z-10 text-white cursor-pointer" onClick={rightDisplace}>
-            <FaAngleRight className="text-2xl" />
-        </div>
-        <div className={"w-fit flex gap-x-4 h-full"}>
+    return <section id="cards__container" className="relative overflow-scroll overflow-y-hidden scrollbar-thin  w-full h-48 p-4">
+        
+        <div id="slider"className={"w-fit flex gap-x-4 h-full"}>
             {displayCards()}
         </div>
 

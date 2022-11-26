@@ -1,4 +1,3 @@
-import { act } from "react-dom/test-utils"
 
 export default function Reducer(state, action){
     if(action.type==='COINS__DATA')
@@ -23,6 +22,12 @@ export default function Reducer(state, action){
         return{
             ...state,
             exchanges: [...action.payload.data]
+        }
+    }
+    if(action.type==='GET__GLOBALSTATS'){
+        return{
+            ...state,
+            globalStats: {...action.payload.data}
         }
     }
 }
