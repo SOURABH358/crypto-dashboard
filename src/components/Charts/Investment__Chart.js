@@ -10,6 +10,7 @@ import {
     Filler
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import {labels, Chartdata} from "./../Utils/ChartData"
 
 ChartJS.register(
     CategoryScale,
@@ -50,14 +51,13 @@ const options = {
     },
 };
 function Investment__Chart() {
-    const labels = ['May', 'June', 'July', 'August', 'September', 'October', 'November'];
 
     const data = {
         labels,
         datasets: [
             {
                 label: 'Dataset 1',
-                data: labels.map(el=>Math.random()*1000),
+                data:Chartdata,
                 backgroundColor: [
                     'rgba(65, 105, 255, 0.3)',
                   ],
