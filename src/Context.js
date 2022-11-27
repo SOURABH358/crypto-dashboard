@@ -1,5 +1,8 @@
 import React, {  useContext, useEffect, useReducer, useState } from "react";
 import Reducer from "./Reducer";
+// require ('dotenv').config();
+// import dotenv from "dotenv";
+// dotenv.config()
 const initialState = {
     coins: [],
     current: "",
@@ -14,14 +17,14 @@ function AppWrapper({ children }) {
     const coinOptions = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a1238b7942msh225a191ee761b65p1ba5e1jsn457057aff454',
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
             'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
         }
     };
     const exchangeOptions = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'a1238b7942msh225a191ee761b65p1ba5e1jsn457057aff454',
+            'X-RapidAPI-Key': process.env.REACT_APP_RAPID_API_KEY,
             'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
         }
     };

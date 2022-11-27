@@ -50,7 +50,7 @@ const options = {
     },
 };
 function Investment__Chart() {
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+    const labels = ['May', 'June', 'July', 'August', 'September', 'October', 'November'];
 
     const data = {
         labels,
