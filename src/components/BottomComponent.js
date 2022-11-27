@@ -8,10 +8,10 @@ function BottomComponent() {
     const { exchanges } = GlobalContext();
     function getExchanges() {
         return exchanges.map(el => {
-            return <div key={el.rank} className="grid grid-cols-[1fr,4fr,4fr,4fr,4fr] py-4 border-b-2">
+            return <div key={el.rank} className="grid grid-cols-[1fr,4fr,2fr,4fr,2fr] gap-2 text-[0.9rem] lg:text-1xl lg:grid-cols-[1fr,4fr,4fr,4fr,4fr] py-4 border-b-2">
                 <p>{el.rank}</p>
                 <div className="flex gap-2">
-                    <img className="w-6" src={el.iconUrl} alt={el.name}/>
+                    <img className=" w-6 h-6 lg:w-6" src={el.iconUrl} alt={el.name}/>
                     <p>{el.name}</p>
                 </div>
                 <p>{el.numberOfMarkets}</p>
@@ -32,10 +32,10 @@ function BottomComponent() {
     //     }):'';
     // }
     return (
-        <section className="h-fit lg:h-[15rem] p-4 flex flex-col lg:flex-row gap-4">
+        <section className="h-fit lg:h-[15rem] p-4 flex flex-col-reverse lg:flex-row gap-4">
             <div className="text-white flex flex-col bg-darker-blue rounded-md p-4 w-full h-[25rem] lg:h-full lg:w-[65%] overflow-y-scroll scrollbar-thin scrollbar-thumb-medium-blue">
                 <p className="mb-2 text-[1.25rem] font-semibold text-center py-4">Exchange Listings</p>
-                <div className="grid grid-cols-[1fr,4fr,4fr,4fr,4fr] py-2 text-grey text-[0.8rem] border-b-2">
+                <div className="grid grid-cols-[1fr,4fr,4fr,4fr,2fr] gap-2 lg:grid-cols-[1fr,4fr,4fr,4fr,4fr] py-2 text-grey text-[0.8rem] border-b-2">
                     <p>S.No</p>
                     <p>Exchanges</p>
                     <p>No of Market</p>

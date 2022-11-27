@@ -17,10 +17,10 @@ function Header() {
             {displayAccount?
             <ul id="tabs" className={"fixed top-[-15rem] right-0 p-4 items-start  lg:p-0 bg-darker-blue z-10 flex flex-col lg:static lg:flex-row lg:items-center gap-6 "}>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
-                    <FaBell className="text-grey lg:hover:text-medium-blue" />
+                    <FaBell className="text-grey hover:text-medium-blue" />
                     <p className="block lg:hidden">Notify</p></li>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
-                    <AiFillMessage className="text-grey lg:hover:text-medium-blue" />
+                    <AiFillMessage className="text-grey hover:text-medium-blue" />
                     <p className="block lg:hidden">Message</p></li>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
                     <GoGraph className="text-grey hover:text-medium-blue" />
@@ -33,10 +33,10 @@ function Header() {
             </ul>:
             <ul id="tabs" className={"fixed top-20 right-0 p-4 items-start  lg:p-0 bg-darker-blue z-10 flex flex-col lg:static lg:flex-row lg:items-center gap-6 "}>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
-                    <FaBell className="text-grey lg:hover:text-medium-blue" />
+                    <FaBell className="text-grey hover:text-medium-blue" />
                     <p className="block lg:hidden">Notify</p></li>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
-                    <AiFillMessage className="text-grey lg:hover:text-medium-blue" />
+                    <AiFillMessage className="text-grey hover:text-medium-blue" />
                     <p className="block lg:hidden">Message</p></li>
                 <li className="flex items-center gap-2 hover:text-medium-blue cursor-pointer">
                     <GoGraph className="text-grey hover:text-medium-blue" />
