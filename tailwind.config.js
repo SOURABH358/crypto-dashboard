@@ -25,7 +25,8 @@ module.exports = {
         'grey':'#A0A0A0',
         'white':'#ffffff',
         'orange':'	#FF8C00',
-        'success-green':'#50C878'
+        'success-green':'#50C878',
+        'danger-red':'rgb(215, 0, 64)'
       },
       fontFamily: {
         sans: ['Graphik', 'sans-serif'],

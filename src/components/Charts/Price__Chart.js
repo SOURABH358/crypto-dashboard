@@ -24,7 +24,7 @@ image.src = 'https://www.chartjs.org/img/chartjs-logo.svg';
     Legend,
     Filler
   );
-  export const options = {
+  const options = {
     responsive: true,
     maintainAspectRatio:false,
     smooth:true,
