@@ -1,5 +1,5 @@
 # Crypto Dashboard
-> A crypto dashboard fetches tracks realtime status of cyrptos, build using ReactJS  
+> A fully responsive crypto dashboard tracks realtime status of cyrptos, build using ReactJS and ChartJS.
 ## Techstack 
 - ReactJs
 - Tailwind CSS
